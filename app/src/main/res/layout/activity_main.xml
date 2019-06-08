@@ -59,8 +59,8 @@
             android:id="@+id/getStartedBtn" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp" android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
             android:fontFamily="@font/montserrat_subrayada" android:textColor="@android:color/background_light"
             android:background="@drawable/get_started_button"/>
 </android.support.constraint.ConstraintLayout>
