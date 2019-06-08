@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SkillActivity">
+        tools:context=".Controller.SkillActivity">
 
     <ImageView
             android:layout_width="0dp"
@@ -48,14 +48,14 @@
                 android:layout_height="wrap_content" android:id="@+id/beginnerBtn" android:layout_weight="1"
                 android:background="@drawable/toggle_button" android:textColor="@android:color/background_light"
                 android:fontFamily="@font/montserrat_subrayada" android:textOff="Beginner" android:textOn="Beginner"
-                android:layout_marginRight="16dp" android:layout_marginEnd="16dp"/>
+                android:layout_marginRight="16dp" android:layout_marginEnd="16dp" android:onClick="beginnerClicked"/>
         <ToggleButton
                 android:text="Baller"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/ballerBtn" android:layout_weight="1"
                 android:background="@drawable/toggle_button" android:textColor="@android:color/background_light"
                 android:fontFamily="@font/montserrat_subrayada" android:textOff="Baller" android:textOn="Baller"
-                android:layout_marginRight="16dp" android:layout_marginEnd="16dp"/>
+                android:layout_marginRight="16dp" android:layout_marginEnd="16dp" android:onClick="ballerClicked"/>
     </LinearLayout>
     <Button
             android:text="FINISH"
@@ -65,5 +65,6 @@
             android:layout_marginRight="16dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3" android:background="@drawable/get_started_button"
-            android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"/>
+            android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"
+            android:onClick="finishClicked"/>
 </android.support.constraint.ConstraintLayout>

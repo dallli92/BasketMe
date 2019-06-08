@@ -1,8 +1,8 @@
-package com.dalilandoulsi.basketme
+package com.dalilandoulsi.basketme.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.dalilandoulsi.basketme.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

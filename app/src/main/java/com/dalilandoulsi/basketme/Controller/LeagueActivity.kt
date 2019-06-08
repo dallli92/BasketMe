@@ -1,10 +1,11 @@
-package com.dalilandoulsi.basketme
+package com.dalilandoulsi.basketme.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.dalilandoulsi.basketme.Utilities.EXTRA_LEAGUE
+import com.dalilandoulsi.basketme.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -17,9 +18,9 @@ class LeagueActivity : BaseActivity() {
 
     fun leagueNextClicked(view: View) {
         if (!selectedLeague.contentEquals("")) {
-            val intent = Intent(this, SkillActivity::class.java)
-            intent.putExtra(EXTRA_LEAGUE, selectedLeague)
-            startActivity(intent)
+            val intenttoLeagueActivity = Intent(this, SkillActivity::class.java)
+            intenttoLeagueActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
+            startActivity(intenttoLeagueActivity)
         } else {
 
             Toast.makeText(this, "Please select a league", Toast.LENGTH_SHORT).show()
