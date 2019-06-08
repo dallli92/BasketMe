@@ -13,7 +13,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:scaleType="centerCrop"
-            android:contentDescription="@string/background_image"/>
+            android:contentDescription="@string/background_image" />
 
 
     <ImageView
@@ -47,22 +47,24 @@
         <ToggleButton
                 android:text="men"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton" android:textOff="men"
+                android:layout_height="wrap_content" android:id="@+id/menBtn" android:textOff="men"
                 android:textOn="men" android:background="@drawable/toggle_button"
-                android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"/>
+                android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"
+                android:onClick="onMenClick"/>
         <ToggleButton
                 android:text="women"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton2" android:layout_marginTop="16dp"
+                android:layout_height="wrap_content" android:id="@+id/womenBtn" android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp" android:textOff="women" android:textOn="women"
                 android:background="@drawable/toggle_button" android:textColor="@android:color/background_light"
-                android:fontFamily="@font/montserrat_subrayada"/>
+                android:fontFamily="@font/montserrat_subrayada" android:onClick="womenClicked"/>
         <ToggleButton
                 android:text="co-ed"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton3" android:textOff="co-ed"
+                android:layout_height="wrap_content" android:id="@+id/coedBtn" android:textOff="co-ed"
                 android:textOn="co-ed" android:background="@drawable/toggle_button"
-                android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"/>
+                android:textColor="@android:color/background_light" android:fontFamily="@font/montserrat_subrayada"
+                android:onClick="ciedClicked"/>
     </LinearLayout>
     <Button
             android:text="NEXT"
