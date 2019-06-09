@@ -4,22 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.dalilandoulsi.basketme.Utilities.EXTRA_LEAGUE
+import com.dalilandoulsi.basketme.Model.Player
 import com.dalilandoulsi.basketme.R
+import com.dalilandoulsi.basketme.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    var player= Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
     }
 
     fun leagueNextClicked(view: View) {
-        if (!selectedLeague.contentEquals("")) {
+        if (!player.league.contentEquals("")) {
             val intenttoLeagueActivity = Intent(this, SkillActivity::class.java)
-            intenttoLeagueActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
+            intenttoLeagueActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(intenttoLeagueActivity)
         } else {
 
@@ -32,20 +33,20 @@ class LeagueActivity : BaseActivity() {
     fun onMenClick(view: View) {
         womenBtn.isChecked = false
         coedBtn.isChecked = false
-        selectedLeague = "men"
+        player.league = "men"
     }
 
     fun womenClicked(view: View) {
         coedBtn.isChecked = false
         menBtn.isChecked = false
-        selectedLeague = "women"
+        player.league = "women"
 
     }
 
     fun ciedClicked(view: View) {
         womenBtn.isChecked = false
         menBtn.isChecked = false
-        selectedLeague = "coed"
+        player.league = "coed"
 
 
     }

@@ -4,37 +4,35 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.dalilandoulsi.basketme.Utilities.EXTRA_LEAGUE
+import com.dalilandoulsi.basketme.Model.Player
 import com.dalilandoulsi.basketme.R
-import com.dalilandoulsi.basketme.Utilities.EXTRA_SKILL
+import com.dalilandoulsi.basketme.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
 
-    var league = ""
-    var skill = ""
+
+    lateinit var player: Player
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league = intent.getStringExtra(EXTRA_LEAGUE)
-        println(league)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
     }
 
     fun beginnerClicked(view: View) {
         ballerBtn.isChecked = false
-        skill = "Beginner"
+        player.skill = "Beginner"
     }
 
     fun ballerClicked(view: View) {
         beginnerBtn.isChecked = false
-        skill = "Baller"
+        player.skill = "Baller"
     }
 
     fun finishClicked(view: View) {
-        if (!skill.contentEquals("")) {
+        if (!player.skill.contentEquals("")) {
             val intentToFinish = Intent(this, FinishActivity::class.java)
-            intentToFinish.putExtra(EXTRA_SKILL, skill)
-            intentToFinish.putExtra(EXTRA_LEAGUE, league)
+            intentToFinish.putExtra(EXTRA_PLAYER, player)
             startActivity(intentToFinish)
         } else {
             Toast.makeText(this, "Please select a level", Toast.LENGTH_SHORT).show()
